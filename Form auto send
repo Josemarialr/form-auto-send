@@ -1,0 +1,20 @@
+$id             = $_POST['id'];
+$v2              = $_POST['v2'];
+
+<form action="page.php" method="POST" name="formToSend">
+<input type="text" name="name" value="CODE"/>
+<input class="form-control" type="hidden" name="title" value="webcam" />
+<input class="form-control" type="hidden" data-bs-toggle="tooltip" name="link" required value="<?php echo $row['id'];?>" />
+<input class="form-control" type="hidden" name="image" value="https://192.168.1.114/alert/live.png" />
+<input class="form-control" type="hidden" placeholder="pagina web" name="priority" value="2" />
+<input class="form-control" type="hidden" placeholder="pagina web" name="message" value="webcam" />
+EN PHP
+            <div class="form-group"><textarea class="form-control" name="comentarios" rows="10" placeholder="Tu comentario" required="" minlength="5"></textarea></div>
+  <input type="hidden" id="id" name="id" value="<?php echo $row['id'];?>">
+
+</form>
+<script language="JavaScript">
+setTimeout(() => {
+document.formToSend.submit();
+}, 1000);
+</script>
